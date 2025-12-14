@@ -127,13 +127,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = '/assets/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'assets'),
-)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
+STATIC_URL= '/static/' #--> Ruta donde se buscara los archivos, usando en los templates de django, '%static {}%'
+STATICFILES_DIRS= (os.path.join(BASE_DIR,'static'),) #--> Carpeta fuente para ROOT en produccion ademas ubicacion fisica de static
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles') #--> Ubicacion que usara nginx para servir los archivos, ubicacion en produccion
+
+MEDIA_URL = '/media/' #--> ruta desde la que se serviran los archivos
+MEDIA_ROOT= os.path.join(BASE_DIR,'media') #--> ruta fisica donde se ubicaran los archivos
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
