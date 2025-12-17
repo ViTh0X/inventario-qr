@@ -1,13 +1,15 @@
 :root{
     --colorPrincipal:#2FFF29;
     --plomo:#212830;
+    --azulvsCode:#101E2C;
     --fuente: "Rubik", sans-serif;
 }
 
 html{
     box-sizing: border-box;
     font-size: 62.5%;
-    font-family: var(--fuente);        
+    font-family: var(--fuente);
+    background-color: var(--azulvsCode);        
 }
 
 *,*::before,*::after{
@@ -43,6 +45,15 @@ html{
     font-weight: bold;
     font-size: 3rem;
     margin-top: 1rem;
+    color: white;
+    font-family: var(--fuente);
+}
+.header__grid__espacio:nth-child(2) h1{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: white;
     font-family: var(--fuente);
 }
 .header__grid__espacio:nth-child(2){
@@ -79,4 +90,58 @@ html{
     text-decoration: none;
     height: 3.5rem;
     font-size: 2rem;        
+}
+.contenedor__tabla{    
+    margin-top: 1.5rem;
+    width: min(100%,110rem);        
+    padding: 1.5rem 3rem 3rem 3rem;              
+    background-color: white;    
+    border-radius: 2rem;
+}
+.tabla{
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;      
+}
+.tabla thead{        
+    font-size: 2.3rem;
+    text-align: start;    
+}
+.tabla th{
+    padding-bottom: 0.5rem;
+    border-bottom: solid 0.2rem var(--plomo);
+    font-weight: bold;        
+}
+.tabla tbody{
+    font-size: 1.8rem;
+}
+.tabla td{
+    text-align: start;
+    padding: 0.5rem 0.8rem 0.5rem 0;
+    border-bottom: solid 0.05rem var(--plomo);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tabla th:nth-child(1){
+    width: 2rem;
+}
+.tabla th:nth-child(2){
+    width: 7rem;
+}
+.tabla th:nth-child(3){
+    width: 3rem;
+}
+.tabla th:nth-child(4){
+    width: 4rem;
+}
+.tabla th:nth-child(5){
+    width: 6rem;
+}
+.tabla th:nth-child(6){
+    width: 8rem;
+}
+.tabla th:nth-child(7){
+    width: 5rem;
 }
